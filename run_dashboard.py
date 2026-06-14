@@ -12,11 +12,11 @@ def main():
 
     # If the venv streamlit is found, use it; otherwise fallback to the system command
     if os.path.exists(streamlit_path):
-        cmd = [streamlit_path, "run", "app.py"]
+        cmd = [streamlit_path, "run", "scripts/app.py"]
     else:
         print("Warning: Local virtual environment (venv) not found at current directory.")
         print("Attempting to run using global/system 'streamlit'...")
-        cmd = ["streamlit", "run", "app.py"]
+        cmd = ["streamlit", "run", "scripts/app.py"]
 
     print(f"Launching dashboard: {' '.join(cmd)}")
     
